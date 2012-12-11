@@ -1,0 +1,8 @@
+{
+  "name": "dsn",
+  "version": "0.0.1",
+  "description": "A DSN parser",
+  "main": "index.js",
+  "author": "Aria Stewart <aredridel@nbtsc.org>",
+  "license": "BSD"
+}
