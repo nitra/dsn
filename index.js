@@ -18,6 +18,7 @@ module.exports = {
             var m = /(.*)=(.*)/.exec(param);
             
             if (m[1].match(/^(host|port|dbname)$/)) {
+                if (m[1] == 'dbname') m[1] = 'database';
                 o[m[1]] = m[2];
             }
             
