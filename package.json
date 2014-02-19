@@ -1,6 +1,6 @@
 {
   "name": "dsn",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "A DSN parser",
   "main": "index.js",
   "author": "Aria Stewart <aredridel@nbtsc.org>",
