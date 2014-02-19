@@ -17,8 +17,9 @@ module.exports = {
         rest.forEach(function(param) {
             var m = /(.*)=(.*)/.exec(param);
             
-            if (m[1].match(/^(host|port|dbname)$/)) {
+            if (m[1].match(/^(host|port|dbname|user(name)?|password)$/)) {
                 if (m[1] == 'dbname') m[1] = 'database';
+                if (m[1] == 'username') m[1] = 'user';
                 o[m[1]] = m[2];
             }
             
