@@ -1,4 +1,4 @@
-/* nodejs:true */
+"use strict";
 
 function DSN() {
 }
