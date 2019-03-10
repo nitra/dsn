@@ -1,11 +1,29 @@
 DSN Parser
 ==========
 
-Supports MySQL (`mysql:`) and Postgresql (`pgsql:`) schemes.
+inspired by https://www.npmjs.com/package/dsn, but allow port in host param. 
 
-DSNs are a scheme, followed by semicolon (`;`), or, for command-line
-convenience, colon-separated (`:`) parameters in the form of `key=value`.
+DSNs are a scheme, followed by semicolon (`;`), in the form of `key=value`.
 
-Valid parameters are `host`, `port`, `dbname`, `user` and `password`, and additionally `username` is accepted as a synonym for `user`.
+All parameters are set as properties on the DSN object, except `dbname` is exposed as `database` and `username` is exposed as `user`.
 
-All parameters are set as properties on the DSN object, except `dbname` is exposed as `database`.
+
+## Installation
+
+`npm install @nitra/dsn`
+
+## Usage
+
+````js
+const { parse } = require('@nitra/dsn')
+
+const dsn = parse('mysql:host=db:3306;dbname=myDBname')
+
+/*
+{ 
+  protocol: 'mysql',
+  host: 'db',
+  port: '3306',
+  database: 'myDBname'
+} */
+````
